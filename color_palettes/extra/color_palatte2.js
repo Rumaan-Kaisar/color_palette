@@ -8,6 +8,7 @@ function colorBank(){
 
     // accessing the colors
     for(var i = 0; i < mydata.length; i++) {
+//            console.log(mydata[i].name)
             let li = document.createElement("li");
             li.innerHTML = '<div class="color_box" style = "background: ' + mydata[i].hex + '";><span>' + mydata[i].name + '</span></div>';
             list3.appendChild(li);
@@ -19,9 +20,9 @@ function colorBank(){
 
 
 
-//var colrBank_button = document.getElementById("color_btn")
-//colrBank_button.addEventListener("click", colorBank)
-colorBank()
+var colrBank_button = document.getElementById("color_btn")
+colrBank_button.addEventListener("click", colorBank)
+
 
 
 //------- RGB to HEXAdecimal color -----------
@@ -56,3 +57,6 @@ function checkColr(){
             });
         }
 }
+
+
+console.log("Total Colors = "+data.length)
